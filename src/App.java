@@ -31,7 +31,8 @@ public class App {
         p6.join();
         p7.join();
         p8.join();
-
+        
+        //al primo avvio del programma non aggiunge tutti e 8 alla classifica
         classifica.stampaClassifica();
     }
 }
