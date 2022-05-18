@@ -47,8 +47,6 @@ public class Classifica {
             }
             tempi.add(new Tempo(nome, tempo));
         }
-
-        System.out.println("aggiunto " + nome);
     }
 
     public void stampaClassifica() {
