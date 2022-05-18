@@ -1,0 +1,40 @@
+Otto amici decidono di fare una gara di velocità 
+sulla pista di go-kart completando 15 giri di 
+pista. Inoltre prima di salire sul kart il pilota
+ deve indossare una tuta protettiva e un casco. 
+L’accesso agli spogliatoi è consentito a 2 
+persone per volta. 
+Scrivi un programma che simuli la gara di 
+velocità e generi la classifica finale. 
+Ciascun pilota, rappresentato da un thread, 
+intraprende le seguenti azioni: 
+
+◗ Entra negli spogliatoi per indossare la 
+tuta e il casco (se non c’è posto attende) 
+◗ Sale sul kart e entra in pista, facendo 
+partire il proprio cronometro -> long start = 
+System.nanoTime();
+◗ Effettua 15 giri di pista; Ogni giro di 
+pista impiega un tempo random -> 
+Thread.sleep((long)(Math.random() * 1000));
+◗ Lascia la pista, facendo stoppare il proprio 
+cronometro -> long stop = System.nanoTime();
+◗ Torna negli spogliatoi per indossare 
+i propri indumenti (se non c’è posto attende)
+◗ Si inserisce nella classifica "parziale" 
+nella giusta posizione in base al tempo segnato 
+sul cronometro in millisecondi -> 
+(stop-start) / 1000000;
+
+Stampare a video gli output necessari a 
+verificare la corretta esecuzione della gara 
+e la classifica finale alla fine della gara.
+Consegnare il link al repo su Github
+
+BONUS POINT
+◗ Per ragioni di sicurezza la pista può essere 
+utilizzata solo da 4 piloti contemporaneamente 
+quindi se in pista ci sono già 4 kart si attende 
+che uno dei piloti termini i giri a disposizione.
+ Modificare il programma di conseguenza
+◗ Generare JavaDoc
